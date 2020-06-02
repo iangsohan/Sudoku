@@ -1,0 +1,2674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SudokuGUI</class>
+ <widget class="QMainWindow" name="SudokuGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>657</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>380</width>
+    <height>475</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>10000000</width>
+    <height>10000000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SudokuGUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #FA8072;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="LineEdit11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-top: 4px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit12">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit14">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-left: 2px solid black;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit13">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-right: 2px solid black;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit16">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-right: 2px solid black;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit15">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit19">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-top: 4px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit17">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-left: 2px solid black;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit18">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid block;
+	border-top: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit28">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit24">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit25">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit27">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit23">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit26">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit22">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit29">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit21">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit31">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit37">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit34">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit36">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit33">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit32">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit35">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit38">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit39">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 4px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit69">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit44">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit67">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit48">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit59">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit64">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit46">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit66">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit62">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit68">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit54">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit65">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit57">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit47">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit45">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit56">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit51">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit55">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit43">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit41">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit53">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit58">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit42">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit49">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>190</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit61">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit52">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>250</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit63">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>310</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit93">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit96">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit79">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit74">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit94">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit99">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit95">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit97">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit85">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit89">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit77">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit78">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit71">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit98">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit75">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit83">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit84">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit92">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit91">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 4px solid black;
+	border-bottom: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit88">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit76">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit87">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit72">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit81">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-left: 4px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit86">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit73">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>370</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+	border-right: 2px solid black;
+	border-top: 2px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit82">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>430</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	qproperty-alignment: AlignCenter;
+	qproperty-maxLength: 1;
+	qproperty-inputMask: d;
+	border: 1px solid black;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string>d</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SolveButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: white;
+	background-color: black;
+	border: 4px solid white;
+}</string>
+    </property>
+    <property name="text">
+     <string>SOLVE</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ClearButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>560</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: white;
+	background-color: black;
+	border: 4px solid white;
+}</string>
+    </property>
+    <property name="text">
+     <string>CLEAR</string>
+    </property>
+    <property name="shortcut">
+     <string>Del</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>561</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>LineEdit11</tabstop>
+  <tabstop>LineEdit12</tabstop>
+  <tabstop>LineEdit13</tabstop>
+  <tabstop>LineEdit14</tabstop>
+  <tabstop>LineEdit15</tabstop>
+  <tabstop>LineEdit16</tabstop>
+  <tabstop>LineEdit17</tabstop>
+  <tabstop>LineEdit18</tabstop>
+  <tabstop>LineEdit19</tabstop>
+  <tabstop>LineEdit21</tabstop>
+  <tabstop>LineEdit22</tabstop>
+  <tabstop>LineEdit23</tabstop>
+  <tabstop>LineEdit24</tabstop>
+  <tabstop>LineEdit25</tabstop>
+  <tabstop>LineEdit26</tabstop>
+  <tabstop>LineEdit27</tabstop>
+  <tabstop>LineEdit28</tabstop>
+  <tabstop>LineEdit29</tabstop>
+  <tabstop>LineEdit31</tabstop>
+  <tabstop>LineEdit32</tabstop>
+  <tabstop>LineEdit33</tabstop>
+  <tabstop>LineEdit34</tabstop>
+  <tabstop>LineEdit35</tabstop>
+  <tabstop>LineEdit36</tabstop>
+  <tabstop>LineEdit37</tabstop>
+  <tabstop>LineEdit38</tabstop>
+  <tabstop>LineEdit39</tabstop>
+  <tabstop>LineEdit41</tabstop>
+  <tabstop>LineEdit42</tabstop>
+  <tabstop>LineEdit43</tabstop>
+  <tabstop>LineEdit44</tabstop>
+  <tabstop>LineEdit45</tabstop>
+  <tabstop>LineEdit46</tabstop>
+  <tabstop>LineEdit47</tabstop>
+  <tabstop>LineEdit48</tabstop>
+  <tabstop>LineEdit49</tabstop>
+  <tabstop>LineEdit51</tabstop>
+  <tabstop>LineEdit52</tabstop>
+  <tabstop>LineEdit53</tabstop>
+  <tabstop>LineEdit54</tabstop>
+  <tabstop>LineEdit55</tabstop>
+  <tabstop>LineEdit56</tabstop>
+  <tabstop>LineEdit57</tabstop>
+  <tabstop>LineEdit58</tabstop>
+  <tabstop>LineEdit59</tabstop>
+  <tabstop>LineEdit61</tabstop>
+  <tabstop>LineEdit62</tabstop>
+  <tabstop>LineEdit63</tabstop>
+  <tabstop>LineEdit64</tabstop>
+  <tabstop>LineEdit65</tabstop>
+  <tabstop>LineEdit66</tabstop>
+  <tabstop>LineEdit67</tabstop>
+  <tabstop>LineEdit68</tabstop>
+  <tabstop>LineEdit69</tabstop>
+  <tabstop>LineEdit71</tabstop>
+  <tabstop>LineEdit72</tabstop>
+  <tabstop>LineEdit73</tabstop>
+  <tabstop>LineEdit74</tabstop>
+  <tabstop>LineEdit75</tabstop>
+  <tabstop>LineEdit76</tabstop>
+  <tabstop>LineEdit77</tabstop>
+  <tabstop>LineEdit78</tabstop>
+  <tabstop>LineEdit79</tabstop>
+  <tabstop>LineEdit81</tabstop>
+  <tabstop>LineEdit82</tabstop>
+  <tabstop>LineEdit83</tabstop>
+  <tabstop>LineEdit84</tabstop>
+  <tabstop>LineEdit85</tabstop>
+  <tabstop>LineEdit86</tabstop>
+  <tabstop>LineEdit87</tabstop>
+  <tabstop>LineEdit88</tabstop>
+  <tabstop>LineEdit89</tabstop>
+  <tabstop>LineEdit91</tabstop>
+  <tabstop>LineEdit92</tabstop>
+  <tabstop>LineEdit93</tabstop>
+  <tabstop>LineEdit94</tabstop>
+  <tabstop>LineEdit95</tabstop>
+  <tabstop>LineEdit96</tabstop>
+  <tabstop>LineEdit97</tabstop>
+  <tabstop>LineEdit98</tabstop>
+  <tabstop>LineEdit99</tabstop>
+  <tabstop>ClearButton</tabstop>
+  <tabstop>SolveButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
