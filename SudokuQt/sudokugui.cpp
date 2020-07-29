@@ -2,7 +2,6 @@
 #include "ui_sudokugui.h"
 #include <vector>
 #include <iostream>
-#include <QKeyEvent>
 using namespace std;
 
 SudokuGUI::SudokuGUI(QWidget *parent)

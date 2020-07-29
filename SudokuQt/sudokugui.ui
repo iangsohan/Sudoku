@@ -58,11 +58,13 @@
      <string notr="true">QLineEdit {
 	qproperty-alignment: AlignCenter;
 	qproperty-maxLength: 1;
-	qproperty-inputMask: d;
 	border: 1px solid block;
 	border-top: 4px solid black;
 	border-left: 4px solid black;
 }</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
     </property>
     <property name="inputMask">
      <string>d</string>
@@ -72,6 +74,9 @@
     </property>
     <property name="placeholderText">
      <string/>
+    </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::LogicalMoveStyle</enum>
     </property>
     <property name="clearButtonEnabled">
      <bool>false</bool>
