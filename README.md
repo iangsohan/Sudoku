@@ -2,7 +2,7 @@
 
 ## Introduction
 
-"Sudoku Solver" is a standard 9x9 sudoku solver GUI designed with Qt-based C++. The GUI is designed for Windows computers, but the outline code for the back-tracking algorithm is also provided. "Sudoku Solver" allows the user to enter any valid sudoku into the displayed grid where it is then able to be solved. (Note: A sudoku is only guaranteed to be unique if there are at least 17 given digits, otherwise the solver only offers one of the possible solutions.)
+"Sudoku Solver" is a standard 9x9 sudoku solver GUI designed with Qt-based C++. The GUI is designed for Windows computers, but the outline code for the back-tracking algorithm is also provided. "Sudoku Solver" allows the user to enter any valid sudoku into the displayed grid where it is then able to be solved. (Note: A sudoku is only guaranteed to be unique if there are at least 17 given digits, otherwise the solver only offers one of the possible solutions.) Visit [Projects](http://iangsohan.com/projects.html) to see a visual.
 
 ## Code Samples
 
